@@ -15,7 +15,7 @@ public class Hello {
 	@GET
 	@Produces(MediaType.TEXT_PLAIN)
 	public String sayPlainTextHello() {
-		return "Hello Jersey";
+		return "Hello Jer";
 	}
 
 	// Metoda apelata daca tipul media cerut este XML
