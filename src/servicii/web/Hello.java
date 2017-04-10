@@ -1,4 +1,4 @@
-package servicii.web;
+/*package servicii.web;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -22,15 +22,14 @@ public class Hello {
 	@GET
 	@Produces(MediaType.TEXT_XML)
 	public String sayXMLHello() {
-		return "<?xml version=\"1.0\"?>" + "<hello> Hello Jersey" + "</hello>";
+		return "<?xml version=\"1.0\"?>" + "<title>" + "Hello Jersey" + "</title>" + "<body><h1>" + "Hello Jersey" + "</h1>" + DBManager.getInstance().getEmployeeList().toString() + "</body>";
 	}
 
 	// Metoda apelata daca tipul media cerut este HTML
 	@GET
 	@Produces(MediaType.TEXT_HTML)
 	public String sayHtmlHello() {
-		return "<html> " + "<title>" + "Hello Jersey" + "</title>"
-				+ "<body><h1>" + "Hello Jersey" + "</h1></body>" + "</html> ";
+		return "<html> " + "<title>" + "Hefghgh" + "</title>" + "<body><h1>" + "Hello Jersey" + "</h1>" + DBManager.getInstance().getEmployeeList().toString() + "</body>" + "</html> ";
 	}
 
-}
+}*/
