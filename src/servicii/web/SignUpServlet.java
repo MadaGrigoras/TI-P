@@ -1,7 +1,5 @@
 package servicii.web;
 import java.io.PrintWriter;
-
-
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,18 +11,17 @@ import javax.servlet.RequestDispatcher;
 //import javax.servlet.http.HttpServlet;
 //import javax.servlet.http.HttpServletRequest;
 //import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 /**
- * Servlet implementation class FirstServlet
+ * Servlet implementation class SignUpServlet
  */
-@WebServlet("/FirstServlet")
-public class FirstServlet extends HttpServlet {
+@WebServlet("/SignUpServlet")
+public class SignUpServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public FirstServlet() {
+    public SignUpServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -32,7 +29,7 @@ public class FirstServlet extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
@@ -44,19 +41,21 @@ public class FirstServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		response.setContentType("text/html");  
         PrintWriter out = response.getWriter();  
-
-        String n=request.getParameter("LUsername");  
-        String p=request.getParameter("LPassword"); 
         
-        HttpSession session = request.getSession(false);
-        if(session!=null)
-        session.setAttribute("LUsername", n);
+        String n=request.getParameter("SEmail");  
+        String p=request.getParameter("SPassword"); 
+        String em=request.getParameter("SUsername"); 
+        
+       
 
-        if(DBManager.validate(n, p)){  
-            RequestDispatcher rd=request.getRequestDispatcher("welcome.jsp");  
-            rd.forward(request,response);  
+        if(DBSignUpManager.createNewUser(n, p,em)>0 ){ 
+        	response.setContentType("text/html");
+        	out.println("<script type=\"text/javascript\">");  
+        	out.println("alert('Successful Sign-up');");  
+        	out.println("</script>");
         }  
         else{  
+        	System.out.println("Blabla"); 
             out.print("<p style=\"color:red\">Sorry username or password error</p>");  
             RequestDispatcher rd=request.getRequestDispatcher("index.jsp");  
             rd.include(request,response);

@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
  
-  <title>Bootstrap Theme Company Page</title>
+  <title>Pegasus Flights</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="bootstrap.css">
@@ -41,13 +42,22 @@
   }
 
   div.alignLeft12 {
-    margin-left: 12%;
+    margin-left: 16%;
   }
 
   div.alignRight12 {
-    margin-right: 12%
+    margin-right: 16%
   }
 
+  .buttonAlign {
+    margin-left: 33.33333333333333%;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    float: left;
+  }
+  
   .jumbotron {
       background-color:#07033d;
       color: #fff;
@@ -99,7 +109,7 @@
       font-style: normal;
   }
   .panel {
-      border: 1px solid #f4511e; 
+      border: 1px solid #cc3333; 
       border-radius:0 !important;
       transition: box-shadow 0.5s;
   }
@@ -113,7 +123,7 @@
   }
   .panel-heading {
       color: #fff !important;
-      background-color: #42f4ee !important;
+      background-color: #cc3333 !important;
       padding: 25px;
       border-bottom: 1px solid transparent;
       border-top-left-radius: 0px;
@@ -212,39 +222,51 @@
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
+<!-- NAVBAR SUS -->
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
+        <span class="icon-bar"></span> 
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
       </button>
       <img src="logo.png" alt="Logo" height="110" width="160" >
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
+		<li><a href="#autentification">AUTHENTIFICATION</a></li>
         <li><a href="#about">ABOUT US</a></li>
-        <li><a href="#services">SERVICES</a></li>
+        <!--<li><a href="#services">SERVICES</a></li> -->
         <li><a href="#portfolio">PORTFOLIO</a></li>
-        <li><a href="#pricing">PRICING</a></li>
-        <li><a href="#contact">CONTACT</a></li>
+        <li><a href="#pricing">OFFERS</a></li>
+        <!--<li><a href="#contact">CONTACT</a></li> -->
       </ul>
     </div>
   </div>
 </nav>
+<!-- NAVBAR SFARSIT -->
 
+<!-- PARTEA DE SUS -->
 <div class="jumbotron text-center">
+<!-- FINAL PARTEA DE SUS -->
   <h1>Pegasus Flights</h1> 
-  <p>We specialize in your safe and comfortable fligth and... blablabla</p> 
+  <br>
+  <p>We specialize in your safe and comfortable flight</p> 
 </div>
 
-
+<!-- Container (Autentification Section)   -->
+<div id="autentification" class="container-fluid">
+  <!--<div class="align1 alignLeft12" id="autentification">-->
+  <h2>Authentification</h2>
   <div class="align1 alignLeft12">
     <h4 style="text-align:center">Sign Up</h4>
     <hr>
     <!-- Sign up -->
-    <form>
+    <form method="post" action="SignUpServlet">
       <fieldset>
           <label class="align1" for="SEmail">Email</label>
           <div>
@@ -253,15 +275,15 @@
           
           <label class="align1" for="SPassword">Password</label>
           <div>
-            <input type="text" placeholder="Fill in with your new Password" class="form-control" name="SPassword" id="SPassword">
+            <input type="password" placeholder="Fill in with your new Password" class="form-control" name="SPassword" id="SPassword">
           </div>
           
           <label class="align1" for="SUsername">Username</label>
           <div>
             <input type="text" placeholder="Insert a new Username" class="form-control" name="SUsername" id="SUsername">
           </div>
-
-          <div>
+			<br>
+          <div class="buttonAlign">
             <button type="submit" class="btn btn-success">Sign up</button>
             <button type="reset" class="btn btn-primary">Clear</button>
           </div>
@@ -271,292 +293,224 @@
         <!-- Sign Up form ends -->    
   </div>
 
-<div class="align1 alignRight12">
-    <h4 style="text-align:center">Login</h4>
-    <hr>
-    <!-- Login -->
-    <form method="post" action="FirstServlet">
-      <fieldset>
-          <label class="align1" for="SEmail">Email</label>
-          <div>
-            <input type="text" placeholder="Username" class="form-control" name="LUsername" id="LUsername">
-          </div>
-          
-          <label class="align1" for="SPassword">Password</label>
-          <div>
-            <input type="text" placeholder="Password" class="form-control" name="LPassword" id="LPassword">
-          </div>
+	<div class="align1 alignRight12">
+		<h4 style="text-align:center">Login</h4>
+		<hr>
+		<!-- Login -->
+		<form method="post" action="FirstServlet">
+		  <fieldset>
+			  <label class="align1" for="SEmail">Email</label>
+			  <div>
+				<input type="text" placeholder="Username" class="form-control" name="LUsername" id="LUsername">
+			  </div>
+			  
+			  <label class="align1" for="SPassword">Password</label>
+			  <div>
+				<input type="password" placeholder="Password" class="form-control" name="LPassword" id="LPassword">
+			  </div>
 
-          <label class="align1" for="ID">ID</label>
-          <div>
-            <input type="text" placeholder="*For employees only" class="form-control" name="ID" id="ID">
-          </div>
-
-          <div>
-            <button type="submit" class="btn btn-success">Login</button>
-            <button type="reset" class="btn btn-primary">Clear</button>
-          </div>
-      </fieldset>
-    </form>
-        
-        <!-- Sign Up form ends -->    
+			  <label class="align1" for="ID">ID</label>
+			  <div>
+				<input type="text" placeholder="*For employees only" class="form-control" name="ID" id="ID">
+			  </div>
+				<br>
+			  <div class="buttonAlign">
+				<button type="submit" class="btn btn-success">Login</button>
+				<button type="reset" class="btn btn-primary">Clear</button>
+			  </div>
+		  </fieldset>
+		</form>
+			
+			<!-- Login form ends -->    
   </div>
-
+ </div>
+<!-- Authentification Sfarist   -->
+ 
 <!-- Container (About Section) -->
-<div id="about" class="container-fluid">
+<div id="about" class="container-fluid bg-grey">
   <div class="row">
     <div class="col-sm-8">
       <h2>About PEGASUS FLIGHTS</h2><br>
-      <h4>Since February 2017, when we've started with just 5 members, our company kept expanding, bringing a considerable change to the world of air transportation throughout the Europe.
-            We are here to make your desire to travel much easier.</h4><br>
+      <h4>Since February 2017, when we've started with just 5 members, our company kept expanding, bringing a considerable change to the world of air transportation throughout Europe.
+            We are here to make your desire to travel easier.</h4><br>
       <p><i>"The moment you doubt whether you can fly, you cease for ever to be able to do it."</i>
 ― J.M. Barrie, Peter Pan</p>
-<p><i>GOOD THINGS COME TO THOSE WHO BOOK FLIGHT! DREAM HIGH!</i></p>
-      <br><button class="btn btn-default btn-lg">Get in Touch</button>
-    </div>
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-signal logo"></span>
+<p><i>Good things come to those who book flight! Dream high!</i></p>
+      <br>
     </div>
   </div>
 </div>
+<!-- (About Section) Sfarsit   -->
 
-<div class="container-fluid bg-grey">
-  <div class="row">
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-globe logo slideanim"></span>
-    </div>
-    <div class="col-sm-8">
-      <h2>Our Values</h2><br>
-      <h4><strong>MISSION:</strong> Our mission lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
-      <p><strong>VISION:</strong> Our vision Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-  </div>
-</div>
 
-<!-- Container (Services Section) -->
-<div id="services" class="container-fluid text-center">
-  <h2>SERVICES</h2>
-  <h4>What we offer</h4>
-  <br>
-  <div class="row slideanim">
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-off logo-small"></span>
-      <h4>POWER</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
-    </div>
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-heart logo-small"></span>
-      <h4>LOVE</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
-    </div>
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-lock logo-small"></span>
-      <h4>JOB DONE</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
-    </div>
-  </div>
-  <br><br>
-  <div class="row slideanim">
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-leaf logo-small"></span>
-      <h4>GREEN</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
-    </div>
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-certificate logo-small"></span>
-      <h4>CERTIFIED</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
-    </div>
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-wrench logo-small"></span>
-      <h4 style="color:#303030;">HARD WORK</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
-    </div>
-  </div>
-</div>
-
-<!-- Container (Portfolio Section) -->
-<div id="portfolio" class="container-fluid text-center bg-grey">
+<!-- Container (Portfolio Section) -->  
+<div id="portfolio" class="container-fluid text-center">
   <h2>Portfolio</h2><br>
-  <h4>What we have created</h4>
+  <h4>Our Gallery</h4>
   <div class="row text-center slideanim">
     <div class="col-sm-4">
       <div class="thumbnail">
-        <img src="paris.jpg" alt="Paris" width="400" height="300">
+        <img src="photos/1-peisaj.png" alt="Paris" width="400" height="300">
         <p><strong>Paris</strong></p>
         <p>Yes, we built Paris</p>
       </div>
     </div>
     <div class="col-sm-4">
       <div class="thumbnail">
-        <img src="newyork.jpg" alt="New York" width="400" height="300">
+        <img src="photos/2-peisaj.png" alt="New York" width="400" height="300">
         <p><strong>New York</strong></p>
         <p>We built New York</p>
       </div>
     </div>
     <div class="col-sm-4">
       <div class="thumbnail">
-        <img src="sanfran.jpg" alt="San Francisco" width="400" height="300">
+        <img src="photos/3-peisaj.png" alt="San Francisco" width="400" height="300">
+        <p><strong>San Francisco</strong></p>
+        <p>Yes, San Fran is ours</p>
+      </div>
+    </div>
+	<div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="photos/4-peisaj.png" alt="San Francisco" width="400" height="300">
+        <p><strong>San Francisco</strong></p>
+        <p>Yes, San Fran is ours</p>
+      </div>
+    </div>
+	<div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="photos/5-peisaj.png" alt="San Francisco" width="400" height="300">
+        <p><strong>San Francisco</strong></p>
+        <p>Yes, San Fran is ours</p>
+      </div>
+    </div>
+	<div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="photos/6-peisaj.png" alt="San Francisco" width="400" height="300">
         <p><strong>San Francisco</strong></p>
         <p>Yes, San Fran is ours</p>
       </div>
     </div>
   </div><br>
   
-  <h2>What our customers say</h2>
+  <h2>What our customers say :</h2>
   <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
       <li data-target="#myCarousel" data-slide-to="1"></li>
       <li data-target="#myCarousel" data-slide-to="2"></li>
+	  <li data-target="#myCarousel" data-slide-to="3"></li>  <!-- ADAUGATA DE MINE -->
     </ol>
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <h4>"This company is the best. I am so happy with the result!"<br><span>Michael Roe, Vice President, Comment Box</span></h4>
+        <h4>"This company is the best. I am so happy with the services!"<br><span>Michael Roe, Vice President, Comment Box</span></h4>
       </div>
       <div class="item">
-        <h4>"One word... WOW!!"<br><span>John Doe, Salesman, Rep Inc</span></h4>
+        <h4>"One word... WOW!!"<br><span>John Doe,Professional Security Manager, London</span></h4>
       </div>
       <div class="item">
-        <h4>"Could I... BE any more happy with this company?"<br><span>Chandler Bing, Actor, FriendsAlot</span></h4>
+        <h4>"I love the way it is designed.It's so easy to use, simple and efficient !"<br><span>James Smith, Department Director, Berlin</span></h4>
+      </div>
+	  <div class="item">
+        <h4>"One of the most intuitive interface i've ever used."<br><span>Sarah Ryder, Architect, Leicester</span></h4>
       </div>
     </div>
 
     <!-- Left and right controls -->
     <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+	  <!--
       <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
+      <span class="sr-only">Previous</span> -->
+	  <span class="sr-only">Previous</span>
+	  <button class="btn btn-lg">&larr;</button>
+	  
     </a>
     <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+		<!--
       <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
+      <span class="sr-only">Next</span> -->
+	  <span class="sr-only">Next</span>
+	  <button class="btn btn-lg">&rarr;</button>
     </a>
   </div>
 </div>
+<!-- (Portfolio Section) Sfarsit -->  
 
-<!-- Container (Pricing Section) -->
-<div id="pricing" class="container-fluid">
+<!-- Container (Pricing(OFFERS) Section) -->
+<div id="pricing" class="container-fluid bg-grey"> 
   <div class="text-center">
-    <h2>Pricing</h2>
-    <h4>Choose a payment plan that works for you</h4>
+    <h2>Offers</h2>
+    <h4>You can choose from the following monthly offers: </h4>
   </div>
   <div class="row slideanim">
     <div class="col-sm-4 col-xs-12">
       <div class="panel panel-default text-center">
         <div class="panel-heading">
-          <h1>Basic</h1>
+          <h1>Best Deal</h1>
         </div>
         <div class="panel-body">
-          <p><strong>20</strong> Lorem</p>
-          <p><strong>15</strong> Ipsum</p>
-          <p><strong>5</strong> Dolor</p>
-          <p><strong>2</strong> Sit</p>
-          <p><strong>Endless</strong> Amet</p>
+          <p align="center"><strong>Paris</strong> &rarr; <strong>București</strong></p>
+          <p align="center"><strong>Madrid</strong> &rarr; <strong>Iași</strong></p>
+          <p align="center"><strong>Oslo</strong> &rarr; <strong>Timișoara</strong></p>
+          <p align="center"><strong>Dublin</strong> &rarr; <strong>Suceava</strong></p>
+          <p align="center"><strong>Moscova</strong> &rarr; <strong>Bacău</strong></p>
         </div>
         <div class="panel-footer">
-          <h3>$19</h3>
-          <h4>per month</h4>
-          <button class="btn btn-lg">Sign Up</button>
+          <h3>Only 60 &euro;</h3>
+          <h4>per ticket</h4>
+          <!-- TO BE ROM LATER <button class="btn btn-lg">Sign Up</button> -->
         </div>
       </div>      
-    </div>     
+    </div>  
+
+	<!-- POZA MIJLOC   -->
+	 <div class="col-sm-4">
+		  <div class="thumbnail">
+			<img src="photos/family.png" alt="Paris" width="400" height="300">
+			
+		  </div>
+	</div>
+		
+	
     <div class="col-sm-4 col-xs-12">
       <div class="panel panel-default text-center">
         <div class="panel-heading">
-          <h1>Pro</h1>
+          <h1>Family Pack</h1>
         </div>
         <div class="panel-body">
-          <p><strong>50</strong> Lorem</p>
-          <p><strong>25</strong> Ipsum</p>
-          <p><strong>10</strong> Dolor</p>
-          <p><strong>5</strong> Sit</p>
-          <p><strong>Endless</strong> Amet</p>
+          <p><strong>Children under 4 years old </strong> have free tickets </p>
+          <p><strong>Children between 4 and 12 years old</strong> have 50% ticket discount</p>
+          <p><strong>Children between 12 and 18 years old </strong> have 25% ticket discount </p>
+		  <p> .</p>
+		  <p> .</p>
+          <!--<p><strong>5</strong> Sit</p>
+          <p><strong>Endless</strong> Amet</p> -->
         </div>
         <div class="panel-footer">
-          <h3>$29</h3>
-          <h4>per month</h4>
-          <button class="btn btn-lg">Sign Up</button>
+          <h3>Available THIS WEEK</h3>
+          <h4>.</h4>
+          <!--  <button class="btn btn-lg">Sign Up</button> -->
         </div>
-      </div>      
-    </div>       
-    <div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center">
-        <div class="panel-heading">
-          <h1>Premium</h1>
-        </div>
-        <div class="panel-body">
-          <p><strong>100</strong> Lorem</p>
-          <p><strong>50</strong> Ipsum</p>
-          <p><strong>25</strong> Dolor</p>
-          <p><strong>10</strong> Sit</p>
-          <p><strong>Endless</strong> Amet</p>
-        </div>
-        <div class="panel-footer">
-          <h3>$49</h3>
-          <h4>per month</h4>
-          <button class="btn btn-lg">Sign Up</button>
-        </div>
-      </div>      
-    </div>    
+      </div>   
+	
+    </div>   
+
   </div>
+  
 </div>
+<!-- (Pricing(OFFERS) Section) Sfarsit --> 
 
-<!-- Container (Contact Section) -->
-<div id="contact" class="container-fluid bg-grey">
-  <h2 class="text-center">CONTACT</h2>
-  <div class="row">
-    <div class="col-sm-5">
-      <p>Contact us and we'll get back to you within 24 hours.</p>
-      <p><span class="glyphicon glyphicon-map-marker"></span> Chicago, US</p>
-      <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
-      <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
-    </div>
-    <div class="col-sm-7 slideanim">
-      <div class="row">
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-        </div>
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-        </div>
-      </div>
-      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
-      <div class="row">
-        <div class="col-sm-12 form-group">
-          <button class="btn btn-default pull-right" type="submit">Send</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Add Google Maps -->
-<div id="googleMap" style="height:400px;width:100%;"></div>
-<script>
-function myMap() {
-var myCenter = new google.maps.LatLng(41.878114, -87.629798);
-var mapProp = {center:myCenter, zoom:12, scrollwheel:false, draggable:false, mapTypeId:google.maps.MapTypeId.ROADMAP};
-var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-var marker = new google.maps.Marker({position:myCenter});
-marker.setMap(map);
-}
-</script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
-<!--
-To use this code on your website, get a free API key from Google.
-Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
--->
-
-<footer class="container-fluid text-center">
+<!-- Footer -->
+<footer class="container-fluid text-center"> 
   <a href="#myPage" title="To Top">
-    <span class="glyphicon glyphicon-chevron-up"></span>
+	<button class="btn btn-lg">&uarr; Back To Top</button>
   </a>
-  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>
+  <p> &copy; 2017 Pegasus Flights </p>
+  
 </footer>
+<!-- Footer  Sfarsit-->
 
 <script>
 $(document).ready(function(){

@@ -1,5 +1,5 @@
 /*package servicii.web;
-
+import com.google.gson.Gson;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -15,7 +15,9 @@ public class Hello {
 	@GET
 	@Produces(MediaType.TEXT_PLAIN)
 	public String sayPlainTextHello() {
-		return "Hello Jer";
+		
+		String json = new Gson().toJson(dataObjects);
+				return "Hello Jer";
 	}
 
 	// Metoda apelata daca tipul media cerut este XML
@@ -26,10 +28,5 @@ public class Hello {
 	}
 
 	// Metoda apelata daca tipul media cerut este HTML
-	@GET
-	@Produces(MediaType.TEXT_HTML)
-	public String sayHtmlHello() {
-		return "<html> " + "<title>" + "Hefghgh" + "</title>" + "<body><h1>" + "Hello Jersey" + "</h1>" + DBManager.getInstance().getEmployeeList().toString() + "</body>" + "</html> ";
-	}
 
 }*/
