@@ -238,7 +238,7 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-		<li><a href="#autentification">AUTHENTIFICATION</a></li>
+		<li><a href="#tickets">TICKETS</a></li>
         <li><a href="#about">ABOUT US</a></li>
         <!--<li><a href="#services">SERVICES</a></li> -->
         <li><a href="#portfolio">PORTFOLIO</a></li>
@@ -258,73 +258,36 @@
   <p>We specialize in your safe and comfortable flight</p> 
 </div>
 
-<!-- Container (Autentification Section)   -->
-<div id="autentification" class="container-fluid">
-  <!--<div class="align1 alignLeft12" id="autentification">-->
-  <h2>Authentification</h2>
-  <div class="align1 alignLeft12">
-    <h4 style="text-align:center">Sign Up</h4>
+<div class="align1 alignLeft12" id="tickets">
+    <h4 style="text-align:center">One way ticket</h4>
     <hr>
-    <!-- Sign up -->
-    <form method="post" action="SignUpServlet">
+    <!-- one way ticket -->
+    <form>
       <fieldset>
-          <label class="align1" for="SEmail">Email</label>
+          <label class="align1" for="Departure">Departure</label>
           <div>
-            <input type="text"  placeholder="Fill in with your Email adress" class="form-control" name="SEmail" id="SEmail">
+            <input type="text"  placeholder="Departure" class="form-control" name="Departure" id="Departure">
           </div>
           
-          <label class="align1" for="SPassword">Password</label>
+          <label class="align1" for="Arrival">Arrival</label>
           <div>
-            <input type="password" placeholder="Fill in with your new Password" class="form-control" name="SPassword" id="SPassword">
+            <input type="text" placeholder="Destination" class="form-control" name="Destination" id="Destination">
           </div>
           
-          <label class="align1" for="SUsername">Username</label>
+          <label class="align1" for="DepartureDate">Departure Date</label>
           <div>
-            <input type="text" placeholder="Insert a new Username" class="form-control" name="SUsername" id="SUsername">
+            <input type="date" placeholder="Date" class="form-control" name="DepartureDate" id="DepartureDate">
           </div>
 			<br>
           <div class="buttonAlign">
-            <button type="submit" class="btn btn-success">Sign up</button>
+            <button type="submit" class="btn btn-success">Search</button>
             <button type="reset" class="btn btn-primary">Clear</button>
           </div>
       </fieldset>
     </form>
         
-        <!-- Sign Up form ends -->    
+        <!-- one way form ends -->    
   </div>
-
-	<div class="align1 alignRight12">
-		<h4 style="text-align:center">Login</h4>
-		<hr>
-		<!-- Login -->
-		<form method="post" action="FirstServlet">
-		  <fieldset>
-			  <label class="align1" for="SEmail">Email</label>
-			  <div>
-				<input type="text" placeholder="Username" class="form-control" name="LUsername" id="LUsername">
-			  </div>
-			  
-			  <label class="align1" for="SPassword">Password</label>
-			  <div>
-				<input type="password" placeholder="Password" class="form-control" name="LPassword" id="LPassword">
-			  </div>
-
-			  <label class="align1" for="ID">ID</label>
-			  <div>
-				<input type="text" placeholder="*For employees only" class="form-control" name="ID" id="ID">
-			  </div>
-				<br>
-			  <div class="buttonAlign">
-				<button type="submit" class="btn btn-success">Login</button>
-				<button type="reset" class="btn btn-primary">Clear</button>
-			  </div>
-		  </fieldset>
-		</form>
-			
-			<!-- Login form ends -->    
-  </div>
- </div>
-<!-- Authentification Sfarist   -->
  
 <!-- Container (About Section) -->
 <div id="about" class="container-fluid bg-grey">
