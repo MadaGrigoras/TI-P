@@ -253,7 +253,7 @@
 <!-- PARTEA DE SUS -->
 <div class="jumbotron text-center">
 <!-- FINAL PARTEA DE SUS -->
-  <h1>Pegasus Flights</h1> 
+  <h1>ADI</h1> 
   <br>
   <p>We specialize in your safe and comfortable flight</p> 
 </div>
