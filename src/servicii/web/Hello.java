@@ -30,3 +30,5 @@ public class Hello {
 	// Metoda apelata daca tipul media cerut este HTML
 
 }*/
+
+
