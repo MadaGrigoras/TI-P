@@ -71,7 +71,7 @@ public class DBManager {
                     .getConnection(url + dbName, userName, password);
 
             pst = conn
-                    .prepareStatement("select * from employee where e_firstName=? and e_password=?");
+                    .prepareStatement("select * from user where u_email=? and u_password=?");
             pst.setString(1, name);
             pst.setString(2, pass);
 

@@ -53,7 +53,7 @@ public class FirstServlet extends HttpServlet {
         session.setAttribute("LUsername", n);
 
         if(DBManager.validate(n, p)){  
-            RequestDispatcher rd=request.getRequestDispatcher("welcome.jsp");  
+            RequestDispatcher rd=request.getRequestDispatcher("bilet.jsp");  
             rd.forward(request,response);  
         }  
         else{  

@@ -59,4 +59,5 @@ public class Flight {
 	{
 		this.flightId=a;
 	}
+	
 }
