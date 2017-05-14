@@ -1,9 +1,9 @@
+<% %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
  
   <title>Pegasus Flights</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="bootstrap.css">
@@ -451,11 +451,11 @@
           <h1>Best Deal</h1>
         </div>
         <div class="panel-body">
-          <p align="center"><strong>Paris</strong> &rarr; <strong>București</strong></p>
-          <p align="center"><strong>Madrid</strong> &rarr; <strong>Iași</strong></p>
-          <p align="center"><strong>Oslo</strong> &rarr; <strong>Timișoara</strong></p>
+          <p align="center"><strong>Paris</strong> &rarr; <strong>Bucharest</strong></p>
+          <p align="center"><strong>Madrid</strong> &rarr; <strong>Iasi</strong></p>
+          <p align="center"><strong>Oslo</strong> &rarr; <strong>Timisoara</strong></p>
           <p align="center"><strong>Dublin</strong> &rarr; <strong>Suceava</strong></p>
-          <p align="center"><strong>Moscova</strong> &rarr; <strong>Bacău</strong></p>
+          <p align="center"><strong>Moscow</strong> &rarr; <strong>Bacau</strong></p>
         </div>
         <div class="panel-footer">
           <h3>Only 60 &euro;</h3>
