@@ -50,9 +50,8 @@ public class SignUpServlet extends HttpServlet {
 
         if(DBSignUpManager.createNewUser(n, p,em)>0 ){ 
         	response.setContentType("text/html");
-        	out.println("<script type=\"text/javascript\">");  
-        	out.println("alert('Successful Sign-up');");  
-        	out.println("</script>");
+        	response.sendRedirect("localhost:8080/Ti-p_Pegasus");
+        	
         }  
         else{  
         	System.out.println("Blabla"); 
