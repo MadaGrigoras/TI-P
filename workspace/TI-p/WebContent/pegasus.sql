@@ -54,7 +54,9 @@ create table Employee
 	e_firstName varchar(20) not null,
 	employee_job varchar(20) not null,
 	salary integer(10) not null,
-	check(salary >0)	
+	check(salary >0),
+	e_password varchar(25);
+	
 );
 
 create table Employee_Flight
@@ -83,17 +85,17 @@ seat int (4)
 
 insert into user values("deliaalene@yahoo.com","11111","delia");
 insert into employee values(
-1111,'Gigoras','Madalina','stw',1200);
+1111,'Gigoras','Madalina','stw',1200,'mada');
 insert into employee values(
-2222,'Popa','Delia','stw',1200);
+2222,'Popa','Delia','stw',1200,'delia');
 insert into employee values(
-3333,'Vasluianu','Ana','stw',1200);
+3333,'Vasluianu','Ana','stw',1200,'ana');
 
 insert into employee values(
-4444,'Cojocaru','Iona','plt',2200);
+4444,'Cojocaru','Iona','plt',2200,'iona');
 
 insert into employee values(
-5555,'Necula','Adi','plt',2200);
+5555,'Necula','Adi','plt',2200,'adi');
 
 insert into flight values(332, 'Rome', 'Paris', '2017-05-22','22:30','00:30', 2, 100,70);
 insert into flight values(333, 'Paris', 'Rome', '2017-05-25','15:15','17:20',2, 100,70);
