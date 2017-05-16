@@ -55,7 +55,7 @@ create table Employee
 	employee_job varchar(20) not null,
 	salary integer(10) not null,
 	check(salary >0),
-	e_password varchar(25);
+	e_password varchar(25)
 	
 );
 
