@@ -16,7 +16,8 @@ create table Flight
 	departure_time varchar(10) not null,
 	arrival_time varchar(10) not null,
 	flight_length integer(10) not null,
-	seats integer(4) default 180
+	seats integer(4) default 180,
+	price integer(5)
 	);
 create table Ticket
 	( 
@@ -42,7 +43,7 @@ create table Booking
 	id_ticket  int(10) default null,
 	id_flight integer(10) not null,
 	constraint booking_id_ticket_fk foreign key(id_ticket)
-	references	Ticket(id_ticket),
+	references Ticket(id_ticket),
 	constraint booking_id_flight_fk foreign key (id_flight)
 	references Flight(id_flight)
 	);
@@ -61,7 +62,7 @@ create table Employee_Flight
 	id_flight integer(10) not null,
 	id_employee integer(10) not null,
 	constraint employee_id_flight_fk foreign key (id_flight)
-	references  Flight(id_flight) ,
+	references Flight(id_flight) ,
 	constraint employee_id_employee_fk foreign key (id_employee)
 	references Employee(id_employee)
 	);
@@ -87,18 +88,18 @@ insert into employee values(
 2222,'Popa','Delia','stw',1200);
 insert into employee values(
 3333,'Vasluianu','Ana','stw',1200);
-);
+
 insert into employee values(
 4444,'Cojocaru','Iona','plt',2200);
-);
+
 insert into employee values(
 5555,'Necula','Adi','plt',2200);
-);
-insert into flight values(332, 'Rome', 'Paris', '2017-05-22','22:30','00:30', 2, 100);
-insert into flight values(333, 'Paris', 'Rome', '2017-05-25','15:15','17:20',2, 100);
-insert into flight values(335, 'Bucharest', 'Milano', '2017-05-25', '12:30','14:30',2, 180);
-insert into flight values(383, 'Bucharest', 'Amsterdam', '2017-05-29','09:50','17;50', 8, 180);
-insert into flight values(337, 'Amsterdam', 'Bucharest', '2017-06-03', '08:00','16:00',8, 30);
+
+insert into flight values(332, 'Rome', 'Paris', '2017-05-22','22:30','00:30', 2, 100,70);
+insert into flight values(333, 'Paris', 'Rome', '2017-05-25','15:15','17:20',2, 100,70);
+insert into flight values(335, 'Bucharest', 'Milano', '2017-05-25', '12:30','14:30',2, 180,120);
+insert into flight values(383, 'Bucharest', 'Amsterdam', '2017-05-29','09:50','17;50', 3, 180,110);
+insert into flight values(337, 'Amsterdam', 'Bucharest', '2017-06-03', '08:00','16:00',3, 30,110);
 
 
 insert into offers values('Beijing', 'Bucharest',200,100);
