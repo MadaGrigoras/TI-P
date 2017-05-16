@@ -80,7 +80,7 @@ price decimal(6,2),
 seat int (4)
 );
 
-insert into user("deliaalene@yahoo.com","11111","delia");
+insert into user values("deliaalene@yahoo.com","11111","delia");
 insert into employee values(
 1111,'Gigoras','Madalina','stw',1200);
 insert into employee values(
